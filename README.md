@@ -11,6 +11,7 @@ If you are using a 64-bit OS, the DLLS to download can be found here:
 
 
 Read the installation guidelines in the downloaded zip, but essentially you do like this:
+
 - Copy RXTXcomm.jar ---> <JAVA_HOME>\jre\lib\ext
 - Copy rxtxSerial.dll ---> <JAVA_HOME>\jre\bin
 - Copy rxtxParallel.dll ---> <JAVA_HOME>\jre\bin
