@@ -25,7 +25,7 @@ Read the installation guidelines in the downloaded zip, but essentially you do l
 
 The only thing needed after adding the dependancy to this library is to implement an Observer which is given to the ArduinoCommunicator.
 
-The observer should extend SerialPortStringObserverImpl or implement SerialPortObserver.
+The observer should extend **SerialPortStringObserverImpl** or implement **SerialPortObserver**.
 
 An example application could then look like this:
 
