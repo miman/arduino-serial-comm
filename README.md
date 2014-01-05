@@ -1,6 +1,7 @@
 A base library for communicating with an Arduino over serial communication
 
 For this to work you must first install the OS specific files (ex. DLL for windows) for RXTX.
+
 You can find out how here:
 
 [http://rxtx.qbang.org/wiki/index.php/Main_Page](http://rxtx.qbang.org/wiki/index.php/Main_Page)
