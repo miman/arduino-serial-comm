@@ -60,25 +60,10 @@ public class ObservableTwoWaySerialComm {
 
 		public void run() {
 			byte[] buffer = new byte[1024];
-			String sendBuffer = null;
 			int len = -1;
 			try {
 				while ((len = this.in.read(buffer)) > -1) {
-					String data = new String(buffer, 0, len);
-					if (data.contains("\n")) {
-						if (sendBuffer != null) {
-							observer.handleData(sendBuffer + data);
-						} else {
-							observer.handleData(data);
-						}
-						sendBuffer = null;
-					} else {
-						if (sendBuffer != null) {
-							sendBuffer = sendBuffer + data;
-						} else {
-							sendBuffer = data;
-						}
-					}
+					observer.handleData(buffer, len);
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
