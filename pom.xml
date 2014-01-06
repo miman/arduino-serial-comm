@@ -4,7 +4,7 @@
 
 	<groupId>eu.miman.comm.arduino</groupId>
 	<artifactId>arduino-serial-comm</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.2</version>
 	<packaging>jar</packaging>
 
 	<name>arduino-serial-comm</name>
@@ -13,13 +13,14 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<rxtx.version>2.1.7</rxtx.version>
+		<junit.version>3.8.1</junit.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -28,6 +29,26 @@
 			<artifactId>rxtx</artifactId>
 			<version>${rxtx.version}</version>
 		</dependency>
-
 	</dependencies>
+
+	<developers>
+		<developer>
+			<id>miman</id>
+			<name>Mikael Thorman</name>
+			<email>mimanit@gmail.com</email>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:ssh://git@bitbucket.org/mikael_thorman/arduino-serial-comm.git</connection>
+		<developerConnection>scm:git:ssh://git@bitbucket.org/mikael_thorman/arduino-serial-comm.git</developerConnection>
+		<url>https://bitbucket.org/mikael_thorman/arduino-serial-comm</url>
+	</scm>
 </project>
