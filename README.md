@@ -2,6 +2,12 @@
 
 A Java base library for communicating with an Arduino over serial communication
 
+## So when should I use this
+
+When you have done your really cool ;-) Arduino project which sends data back over a serial connection to your compouter that you want to handle in a Java program.
+
+Read the Library Usage chapter below on how this library is used.
+
 # Serial Library installation
 
 For this to work you must first install the OS specific files (ex. a DLL for windows) for RXTX.
