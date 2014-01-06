@@ -1,0 +1,16 @@
+This is the steps needed to release the artifact to the central maven repository.
+
+build prj:
+---------
+mvn install
+mvn source:jar
+mvn javadoc:jar
+copy arduino-serial-comm-1.1.1.pom from local maven repo to the target dir
+
+
+mvn gpg:sign-and-deploy-file -Durl=https://oss.sonatype.org/service/local/staging/deploy/maven2/ -DrepositoryId=sonatype-nexus-staging -DpomFile=target/arduino-serial-comm-1.0.3.pom -Dfile=target/arduino-serial-comm-1.0.3.jar
+
+mvn gpg:sign-and-deploy-file -Durl=https://oss.sonatype.org/service/local/staging/deploy/maven2/ -DrepositoryId=sonatype-nexus-staging -DpomFile=target/arduino-serial-comm-1.0.3.pom -Dfile=target/arduino-serial-comm-1.0.3-javadoc.jar -Dclassifier=javadoc
+
+mvn gpg:sign-and-deploy-file -Durl=https://oss.sonatype.org/service/local/staging/deploy/maven2/ -DrepositoryId=sonatype-nexus-staging -DpomFile=target/arduino-serial-comm-1.0.3.pom -Dfile=target/arduino-serial-comm-1.0.3-sources.jar -Dclassifier=sources
+
