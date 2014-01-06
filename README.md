@@ -1,16 +1,16 @@
 # Purpose
 
-A base library for communicating with an Arduino over serial communication
+A Java base library for communicating with an Arduino over serial communication
 
 # Serial Library installation
 
-For this to work you must first install the OS specific files (ex. DLL for windows) for RXTX.
+For this to work you must first install the OS specific files (ex. a DLL for windows) for RXTX.
 
 You can find out how here:
 
 [http://rxtx.qbang.org/wiki/index.php/Main_Page](http://rxtx.qbang.org/wiki/index.php/Main_Page)
 
-If you are using a 64-bit OS, the DLLS to download can be found here:
+If you are using a 64-bit OS, the DLL's to download can be found here:
 
 [http://mfizz.com/oss/rxtx-for-java](http://mfizz.com/oss/rxtx-for-java)
 
@@ -21,7 +21,7 @@ Read the installation guidelines in the downloaded zip, but essentially you do l
 - Copy rxtxSerial.dll ---> <JAVA_HOME>\jre\bin
 - Copy rxtxParallel.dll ---> <JAVA_HOME>\jre\bin
 
-# Usage
+# Library Usage
 
 The only thing needed after adding the dependancy to this library is to implement an Observer which is given to the ArduinoCommunicator.
 
@@ -39,3 +39,13 @@ An example application could then look like this:
 			communicator.run(observer, args);
 		}
 	}
+
+## Maven dependency
+
+You need to add the following maven dependency (I haven't uploaded this to the central maven repo yet, so you have to build it and add it to you local repo until this is done).
+
+    <dependency>
+    	<groupId>eu.miman.comm.arduino</groupId>
+    	<artifactId>arduino-serial-comm</artifactId>
+    	<version>1.0.0</version>
+    </dependency>
