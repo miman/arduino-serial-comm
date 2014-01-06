@@ -44,10 +44,10 @@ On the wiki you can find an example of an Observer class., the wiki can be found
  
 ## Maven dependency
 
-You need to add the following maven dependency (I haven't uploaded this to the central maven repo yet, so you have to build it and add it to you local repo until this is done).
+You need to add the following maven dependency, it has been uploaded to the central maven repository.
 
     <dependency>
     	<groupId>eu.miman.comm.arduino</groupId>
     	<artifactId>arduino-serial-comm</artifactId>
-    	<version>1.0.0</version>
+    	<version>1.0.3</version>
     </dependency>
