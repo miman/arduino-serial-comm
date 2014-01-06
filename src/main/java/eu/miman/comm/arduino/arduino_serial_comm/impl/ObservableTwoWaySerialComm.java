@@ -35,6 +35,7 @@ public class ObservableTwoWaySerialComm {
 
 				InputStream in = serialPort.getInputStream();
 				serialOut = serialPort.getOutputStream();
+				observer.setOutputStream(serialOut);
 
 				(new Thread(new SerialReader(in, observer))).start();
 

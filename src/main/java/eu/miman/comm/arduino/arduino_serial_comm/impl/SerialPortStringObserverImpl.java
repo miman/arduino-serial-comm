@@ -1,5 +1,8 @@
 package eu.miman.comm.arduino.arduino_serial_comm.impl;
 
+import java.io.IOException;
+import java.io.OutputStream;
+
 import eu.miman.comm.arduino.arduino_serial_comm.SerialPortObserver;
 
 /**
@@ -12,15 +15,32 @@ import eu.miman.comm.arduino.arduino_serial_comm.SerialPortObserver;
 public abstract class SerialPortStringObserverImpl implements
 		SerialPortObserver {
 	String sendBuffer = null;
+	OutputStream serialOut = null;
 
 	abstract public void handleData(String data);
 
-	public boolean useBinaryData() {
-		return false;
+	/**
+	 * The output stream to the serial port is set here, so the observer can write to the serial connection.
+	 * @param serialOut	The serial connection output stream
+	 */
+	public void setOutputStream(OutputStream serialOut) {
+		this.serialOut = serialOut;
 	}
 
-	abstract public boolean useSeparatorCharacter();
+	/**
+	 * A helper function used to write data to the serial connection.
+	 * @param data	The data to send
+	 * @throws IOException	If there was an exception writing the data to the serial connection.
+	 */
+	protected void writeToOutput(String data) throws IOException {
+		serialOut.write(data.getBytes());
+	}
 
+	/**
+	 * This function is called when new data is received over the serial port. 
+	 * @param data	The received data.
+	 * @param length	The length of the received data.
+	 */
 	public void handleData(byte[] buffer, int length) {
 		String data = new String(buffer, 0, length);
 		if (!useSeparatorCharacter()) {
@@ -49,6 +69,7 @@ public abstract class SerialPortStringObserverImpl implements
 		}
 	}
 
-	abstract public String getSeparator();
+	abstract public boolean useSeparatorCharacter();
 
+	abstract public String getSeparator();
 }
