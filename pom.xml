@@ -4,7 +4,7 @@
 
 	<groupId>eu.miman.comm.arduino</groupId>
 	<artifactId>arduino-serial-comm</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>arduino-serial-comm</name>
