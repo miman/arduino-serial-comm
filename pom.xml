@@ -4,7 +4,7 @@
 
 	<groupId>eu.miman.comm.arduino</groupId>
 	<artifactId>arduino-serial-comm</artifactId>
-	<version>1.0.3-SNAPSHOT</version>
+	<version>1.0.3</version>
 	<packaging>jar</packaging>
 
 	<name>arduino-serial-comm</name>
@@ -51,4 +51,5 @@
 		<developerConnection>scm:git:ssh://git@bitbucket.org/mikael_thorman/arduino-serial-comm.git</developerConnection>
 		<url>https://bitbucket.org/mikael_thorman/arduino-serial-comm</url>
 	</scm>
+	<description>A Java base library for communicating with an Arduino over serial communication.</description>
 </project>

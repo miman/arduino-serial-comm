@@ -38,7 +38,7 @@ public abstract class SerialPortStringObserverImpl implements
 
 	/**
 	 * This function is called when new data is received over the serial port. 
-	 * @param data	The received data.
+	 * @param buffer	The received data.
 	 * @param length	The length of the received data.
 	 */
 	public void handleData(byte[] buffer, int length) {
