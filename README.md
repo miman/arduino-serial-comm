@@ -40,6 +40,8 @@ An example application could then look like this:
 		}
 	}
 
+On the wiki you can find an example of an Observer class., the wiki can be found [here](https://bitbucket.org/mikael_thorman/arduino-serial-comm/wiki/Home)
+ 
 ## Maven dependency
 
 You need to add the following maven dependency (I haven't uploaded this to the central maven repo yet, so you have to build it and add it to you local repo until this is done).
